@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-// import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import Spinner from 'react-spinkit';
 
 import PortfolioItem from '../components/PortfolioItem';
 
@@ -17,7 +17,8 @@ class Portfolio extends Component {
     fetchItems() {
         fetch('https://mysterious-sands-79444.herokuapp.com/api/search/stories')
             .then(res => res.json())
-            .then(json => this.setState({"data":json.data}));
+            .then(json => json.data.sort((a,b) => a.tier - b.tier))
+            .then(data => this.setState({"data":data}));
     }
 
     renderItems() {
@@ -34,12 +35,15 @@ class Portfolio extends Component {
 
             return(
                 <div className={"portfolio"}>
-                    <p>{"Oh the perks of a free Heroku account. Cut me a little slack this time while it loads, alright?."}</p>
+                    <p>{"Oh, the perks of free accounts... I promise my code works, alright?"}</p>
+                    <Spinner name="pacman" />
+                    <p>{"Cut me a little slack this time and wait for Heroku to initialize my API. It takes less than 30 seconds."}</p>
                 </div>
 
             );
 
-        } else {
+        }
+        else {
 
             return(
                 <div className={"portfolio"}>
