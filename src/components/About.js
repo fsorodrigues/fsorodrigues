@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-// import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import Spinner from 'react-spinkit';
 
 class About extends Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class About extends Component {
 
             return(
                 <div className={"about-container"}>
-                    <p>{"loading..."}</p>
+                    <Spinner name="pacman" />
                 </div>
 
             );

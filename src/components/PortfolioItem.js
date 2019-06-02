@@ -26,7 +26,7 @@ class PortfolioItem extends Component {
 
         return(
             <div className={"d-flex portfolio-item mb-4"}>
-                <a href={url}>
+                <a href={url} target="_blank">
                     <div className={"thumb-container mr-3"}>
                         <div className={"img-container rounded-lg"} style={imgStyle}></div>
                     </div>
