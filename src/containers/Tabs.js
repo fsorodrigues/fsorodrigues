@@ -23,6 +23,7 @@ class Tabs extends Component {
                 </nav>
                 <Routes>
                     <Route path={`/`} exact={"true"} element={ <Portfolio /> }/>
+                    <Route path={`/fsorodrigues`} exact={"true"} element={ <Portfolio /> }/>
                     {/* <Route path={`/home/about-me`} element={ <About /> }/> */}
                 </Routes>
                 
