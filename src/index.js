@@ -1,7 +1,7 @@
 // importing react framework
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import * as ReactDOMClient from 'react-dom/client';
+import {BrowserRouter} from 'react-router-dom';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 
@@ -20,18 +20,22 @@ import App from './containers/App';
 
 library.add(fab);
 
-if (process.env.NODE_ENV === "development") {
-    require('dotenv').config();
-}
+// if (process.env.NODE_ENV === "development") {
+//     require('dotenv').config();
+// }
 
-ReactDOM.render(
+const root = document.getElementById('root');
+
+const renderer = ReactDOMClient.createRoot(root);
+
+renderer.render(
     <div className={"container-fluid mt-5 mb-4"}>
-        <Router>
+        <BrowserRouter>
             <App />
-        </Router>
-    </div>,
-    document.getElementById('root')
-);
+        </BrowserRouter>
+    </div>
+)
+
 
 
 // <div className="container-fluid mt-5">

@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+// import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import Spinner from 'react-spinkit';
+
+import {csvParse, autoType} from 'd3-dsv'
 
 import PortfolioItem from '../components/PortfolioItem';
 
@@ -15,22 +17,24 @@ class Portfolio extends Component {
     }
 
     fetchItems() {
-        fetch('https://mysterious-sands-79444.herokuapp.com/api/search/stories')
-            .then(res => res.json())
-            .then(json => json.data.sort((a,b) => a.tier - b.tier))
-            .then(data => this.setState({"data":data}));
+        fetch('/data/stories.csv')
+            .then(res => res.text())
+            .then(text => csvParse(text, autoType))
+            .then(json => json.sort((a,b) => a.tier - b.tier))
+            .then(data => this.setState({data}));
     }
 
     renderItems() {
+    
         return this.state.data.map(d => {
             return (
-                <PortfolioItem key={d.slug} data={d}/>
+                <PortfolioItem key={d.slug} data={d} />
             );
         });
     }
 
     render() {
-
+        this.state.data
         if (!this.state.data) {
 
             return(

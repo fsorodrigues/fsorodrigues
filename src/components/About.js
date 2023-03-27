@@ -20,7 +20,8 @@ class About extends Component {
     renderItems() {
         return this.state.data.map((d,i) => {
             return (
-                <p key={i}>{d}</p>
+                // <p key={i}>{d}</p>
+                <div></div>
             );
         });
     }

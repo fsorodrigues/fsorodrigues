@@ -53,6 +53,7 @@ a:hover {
 
 .portfolio-item {
     border-bottom: 1pt $gray-300 solid;
+    column-gap: 8px;
 
     p {
         font-size: 0.8rem;

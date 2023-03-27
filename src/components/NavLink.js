@@ -5,7 +5,7 @@ class Link extends Component {
 
     render() {
         return (
-            <NavLink {...this.props} className="nav-link" activeClassName="active"/>
+            <NavLink {...this.props} className={({isActive}) => (isActive ? "nav-link active" : "nav-link")} />
         );
   }
 }

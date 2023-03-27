@@ -9,9 +9,9 @@ class PortfolioItem extends Component {
     }
 
     renderTags() {
-        return this.props.data.tags.map(d => {
+        return this.props.data.tags.split('||').map(d => {
             return (
-                <code key={d} className={"p-1 rounded-lg mr-2 tag"}>{d}</code>
+                <code key={d} className={"p-1 rounded-lg ms-1 tag"}>{d}</code>
             );
         });
     }

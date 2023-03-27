@@ -1,0 +1,8 @@
+tier,slug,title,publication,url,description,tags
+1,the-chase,The thrill of The Chase,stuff.co.nz,https://interactives.stuff.co.nz/2022/07/the-chase-game-show-statistics/,,next.js||react||d3.js||aws lambda||serverless||rest api||dbt
+2,legislature-wrap,Annual legislature wrap,vtdigger.org,https://vtdigger.org/vtdiggers-2018-legislative-wrap/,,react
+2,Election-night,2018 Election night live results,vtdigger.org,http://elections.vtdigger.org,,react||no sql
+2,fact-check-workforce,Fact-check: Has Vermont’s largest county lost workers?,vtdigger.org,https://vtdigger.org/2019/01/25/fact-check-vermonts-largest-county-lost-workers/,,python||pandas||matplotlib||adobe cc
+2,pensions,Who’s to blame for the crushing burden of Vermont’s retired teachers’ pension fund?,vtdigger.org,https://vtdigger.org/2019/04/06/whos-to-blame-for-the-crushing-burden-of-vermonts-retired-teachers-pension-fund/,,d3.js||scrolly-telling
+2,immunization,110 Vermont schools do not meet the 95% immunization threshold.,vtdigger.org,https://vtdigger.org/2019/05/27/school-vaccination-rate/,,react
+2,bash-cli,CLI House vote downloader,vtdigger.org,,,bash
